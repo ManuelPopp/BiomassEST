@@ -1,0 +1,94 @@
+* using log directory 'D:/Dateien/Studium_KIT/Master_GOEK/10_FS_Geooekologie/BiomassEST/BiomassEST.Rcheck'
+* using R version 4.0.2 (2020-06-22)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: ISO8859-1
+* using options '--no-manual --as-cran'
+* checking for file 'BiomassEST/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'BiomassEST' version '0.1.0'
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking serialization versions ... OK
+* checking whether package 'BiomassEST' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+cite.datasource: no visible binding for global variable 'Genus'
+cite.datasource: no visible binding for global variable 'Epithet'
+est.bm.H: no visible binding for global variable 'b1'
+est.bm.H: no visible binding for global variable 'b2'
+est.bm.RCD: no visible binding for global variable 'b1'
+est.bm.RCD: no visible binding for global variable 'b2'
+est.bm.RCD2H: no visible binding for global variable 'b1'
+est.bm.RCD2H: no visible binding for global variable 'b2'
+Undefined global functions or variables:
+  Epithet Genus b1 b2
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'Conifers'
+  'x'
+
+Undocumented arguments in documentation object 'cite.datasource'
+  'Species' 'Parameter' 'Author' 'Bibtex'
+
+Undocumented arguments in documentation object 'est.bm'
+  'BHD'
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking R/sysdata.rda ... OK
+* checking examples ... ERROR
+Running examples in 'BiomassEST-Ex.R' failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: cite.datasource
+> ### Title: Cite original source of parameter values used for biomass
+> ###   calculations
+> ### Aliases: cite.datasource
+> 
+> ### ** Examples
+> 
+> cite.datasource(Species = "Abies alba")
+Error in which(dataset$Genus == Genus & dataset$Epithet == Epithet) : 
+  object 'Genus' not found
+Calls: cite.datasource -> which
+Execution halted
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 1 WARNING, 1 NOTE

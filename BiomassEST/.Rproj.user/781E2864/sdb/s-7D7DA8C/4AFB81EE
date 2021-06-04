@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: BiomassEST\nType: Package\nTitle: Estimation of tree biomass based on proxy parameters, following equations derived from peer-reviewed papers\nVersion: 0.1.0\nAuthors@R: person(given = \"Manuel R.\",\n           family = \"Popp\",\n           role = c(\"aut\", \"cre\"),\n           email = \"manuel.popp@student.kit.edu\",\n           comment = c(ORCID = \"https://orcid.org/0000-0003-0747-5415\"))\nMaintainer: Manuel R. Popp <manuel.popp@student.kit.edu>\nDescription: The BiomassEST package provides simple functions to estimate tree biomass from easy-to-obtain data such as diameter at breast height, root collar diameter, or tree height. The functions rely on parameters obtained from peer-reviewed papers (use the BiomassEST::cite.datasource() function to display source paper citations).\nLicense: MIT + file LICENSE\nEncoding: UTF-8\nLazyData: true\nDepends: \n    R (>= 2.10)\n",
+    "created" : 1622844642806.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "768672007",
+    "id" : "4AFB81EE",
+    "lastKnownWriteTime" : 1622845738,
+    "last_content_update" : 1622845738,
+    "path" : "D:/Dateien/Studium_KIT/Master_GOEK/10_FS_Geooekologie/BiomassEST/BiomassEST/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}
