@@ -12,6 +12,9 @@ est.bm <- function(Species, RCD = NA, BHD = NA, H = NA, use = NA, H_meas = NA){
     use <- "opportunistic"
   }
   if(is.numeric(RCD) & !is.numeric(H) | is.numeric(RCD) & all(use == "RCD")){
+    if(anyNA(H_meas)){
+      warning("Mode RCD (explicitly set or no H provided) missing value: H_meas")
+    }
     if(length(Species) > 1 & length(H_meas) == 1){
       H_meas <- rep(H_meas, length(Species))
     }
