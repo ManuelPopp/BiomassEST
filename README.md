@@ -18,7 +18,7 @@ As an example, we will estimate the biomass of *Picea abies* with a height of 34
 which outputs a numeric value, the estimated biomass in g:<br/>
 `[1] 511.2756`<br/>
 <br/>
-Alternatively, the a measurement of the stem diameter (root collar diameter, RCD, or diameter at breast height, BHD) can be passed using the `RCD` or the `BHD` argument. In this case, the height at which the measurement was taken must also be provided in the `H_meas` argument. Currently, there are only transformations available for <img src="https://render.githubusercontent.com/render/math?math=H_{meas} \in \left{5, 10, 50, 130\right}">.<br/>
+Alternatively, the a measurement of the stem diameter (root collar diameter, RCD, or diameter at breast height, BHD) can be passed using the `RCD` or the `BHD` argument. In this case, the height at which the measurement was taken must also be provided in the `H_meas` argument. Currently, there are only transformations available for <img src="https://render.githubusercontent.com/render/math?math=H_{meas} \in \{5, 10, 50, 130\}">.<br/>
 In version 0.0.1, there is no difference between `RCD` and `BHD`.<br/>
 Example:<br/>
 `est.bm("Picea abies", RCD = 20, H_meas = 130)`<br/>
