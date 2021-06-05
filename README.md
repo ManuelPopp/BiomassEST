@@ -14,7 +14,7 @@ Then install BiomassEST from Github:<br/>
 In order to estimate the biomass of a tree, you can simply run the `est.bm()` function which has the following defaults:<br/>
 `est.bm(Species, RCD = NA, BHD = NA, H = NA, use = NA, H_meas = NA)`<br/>
 As an example, we will estimate the biomass of *Picea abies* with a height of 340 cm:<br/>
-`est.bm("Picea abies", H = 130)`<br/>
+`est.bm("Picea abies", H = 340)`<br/>
 which outputs a numeric value, the estimated biomass in g:<br/>
 `[1] 511.2756`<br/>
 <br/>
