@@ -2,7 +2,7 @@
  BiomassEstimations based on easy-to-obtain data (e.g., stem diameter, tree height)
 
 # Installation
-To install the package, you can use `devtools::install_github()`. If missing, install first:<br/>
+To install the package, you can use `devtools::install_github()`. If missing, install devtools first:<br/>
 `install.packages("devtools")`<br/>
 `require("devtools")`<br/>
 
