@@ -7,5 +7,5 @@ To install the package, you can use `devtools::install_github()`. If missing, in
 `require("devtools")`<br/>
 
 Then install BiomassEST from Github:<br/>
-`install_github("ManuelPopp/BiomassEST/BiomassEST")`<br/>
+`install_github("ManuelPopp/BiomassEST")`<br/>
 `require("BiomassEST")`
