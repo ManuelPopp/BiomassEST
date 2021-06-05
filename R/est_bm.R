@@ -1,11 +1,11 @@
 est.bm <- function(Species, RCD = NA, BHD = NA, H = NA, use = NA, H_meas = NA){
-  if(is.na(RCD) & !is.na(BHD) & !is.na(H_meas)){
+  if(all(is.na(RCD)) & !anyNA(BHD) & !anyNA(H_meas)){
     RCD <- BHD
   }
-  if(is.na(RCD) & is.na(BHD) & is.na(H)){
+  if(all(is.na(RCD)) & all(is.na(BHD)) & all(is.na(H))){
     warning("No parameters set. Provide at least one (ore more) of the following: RCD, BHD, H.")
   }
-  if(is.na(H) & !is.numeric(H_meas)){
+  if(all(is.na(H)) & !is.numeric(H_meas)){
     warning("Parameter H_meas not set. Please provide the height of your measurement.")
   }
   if(all(is.na(use))){
@@ -26,6 +26,7 @@ est.bm <- function(Species, RCD = NA, BHD = NA, H = NA, use = NA, H_meas = NA){
       AGB <- mapply(FUN = BiomassEST::est.bm.RCD2H, Species = Species, RCD = RCD, H = H, H_meas = H_meas)
     }else if(any(anyNA(RCD), anyNA(H), anyNA(H_meas)) & use == "opportunistic" | all(use == "RCD2H")){
       warning("Data contains NA.")
+      AGB <- NA
     }else if(!use == "opportunistic" & !all(use == "RCD2H")){
       AGB <- vector()
       for(i in 1:length(Species)){
