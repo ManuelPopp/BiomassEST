@@ -18,3 +18,4 @@ for(i in 1:nrow(Citations)){
 usethis::use_data(Parameters_RCD, Parameters_H, Parameters_RCD2H,
                   Citations, Corrections, Conifers,
                   internal = TRUE, overwrite = TRUE)
+# after changing a data set: Run this script. Check. Build. Push to Github main.

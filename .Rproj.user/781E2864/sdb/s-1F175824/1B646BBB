@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(\"readxl\")\ndat <- \"C:/Users/Manuel/Nextcloud/Geobotanik/dat/Biomass_estimation.xlsx\"\nParameters_RCD <- read_excel(dat, sheet = \"Parameters_RCD\")\nParameters_RCD <- as.data.frame(Parameters_RCD)\nParameters_H <- read_excel(dat, sheet = \"Parameters_H\")\nParameters_H <- as.data.frame(Parameters_H)\nParameters_RCD2H <- read_excel(dat, sheet = \"Parameters_RCD2H\")\nParameters_RCD2H <- as.data.frame(Parameters_RCD2H)\nCitations <- read_excel(dat, sheet = \"Citations\")\nCitations <- as.data.frame(Citations)\nCorrections <- read_excel(dat, sheet = \"Corrections\")\nCorrections <- as.data.frame(Corrections)\nConifers <- read_excel(dat, sheet = \"Conifers\")\nConifers <- as.data.frame(Conifers)\nfor(i in 1:nrow(Citations)){\n  Citations$Bibtex[i] <- gsub(\"\\\\n\", \"\\n\", Citations$Bibtex[i])\n}\nusethis::use_data(Parameters_RCD, Parameters_H, Parameters_RCD2H,\n                  Citations, Corrections, Conifers,\n                  internal = TRUE, overwrite = TRUE)\n# after changing a data set: Run this script. Check. Build. Push to Github main.\n",
+    "created" : 1622889957149.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1203222838",
+    "id" : "1B646BBB",
+    "lastKnownWriteTime" : 1622891923,
+    "last_content_update" : 1622891923014,
+    "path" : "D:/Dateien/Studium_KIT/Master_GOEK/10_FS_Geooekologie/BiomassEST/Package_maintenance.R",
+    "project_path" : "Package_maintenance.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

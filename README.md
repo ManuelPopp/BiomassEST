@@ -35,6 +35,7 @@ The functions and parameters used to estimate tree biomass were extracted from p
 using either the argument `Species` or `Author`. If providing only a character string, the function will assume it is a species name.<br/>
 Defaults are:<br/>
 `cite.datasource(Species = NA, Parameter = "RCD", Author = NA, Bibtex = TRUE)`<br/>
+Citations can be printed as BibTeX or as plain text as defined in the `Bibtex` argument (class: logical).<br/>
 Examples:<br/>
 1) Return citation of the data source the package uses when calculating biomass of *Abies alba* from RCD<br/>
 `cite.datasource("Abies alba")`<br/>
