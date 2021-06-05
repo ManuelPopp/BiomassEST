@@ -3,10 +3,14 @@ est.bm <- function(Species, RCD = NA, BHD = NA, H = NA, use = NA, H_meas = NA){
     RCD <- BHD
   }
   if(all(is.na(RCD)) & all(is.na(BHD)) & all(is.na(H))){
-    warning("No parameters set. Provide at least one (ore more) of the following: RCD, BHD, H.")
+    warning("No parameters set. Provide at least one (ore more) of the following: RCD or BHD including H_meas, H.")
   }
   if(all(is.na(H)) & !is.numeric(H_meas)){
     warning("Parameter H_meas not set. Please provide the height of your measurement.")
+  }
+  if(all(is.na(H_meas)) & !anyNA(H) & !all(is.na(RCD))){
+    warning("RCD provided but H_meas missing. Calculating based on H.")
+    use <- "H"
   }
   if(all(is.na(use))){
     use <- "opportunistic"
