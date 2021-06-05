@@ -1,5 +1,14 @@
 cite.datasource <- function(Species = NA, Parameter = "RCD", Author = NA, Bibtex = TRUE){
   if(is.na(Author) & !is.na(Species)){
+    if(is.character(Species)){
+      Genus <- strsplit(Species, "[ _]")[[1]][1]
+      Epithet <- strsplit(Species, "[ _]")[[1]][2]
+      if(is.na(Epithet)){
+        Epithet <- "spec"
+      }
+    }else{
+      warning("Invalid Species argument: ", Species)
+    }
     dataset <- get(paste("Parameters", Parameter, sep = "_"))
     key <- dataset$Citation[which(
       dataset$Genus == Genus & dataset$Epithet == Epithet
