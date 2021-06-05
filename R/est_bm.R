@@ -34,7 +34,7 @@ est.bm <- function(Species, RCD = NA, BHD = NA, H = NA, use = NA, H_meas = NA){
         }else if(use[i] == "H"){
           AGB[i] <- BiomassEST::est.bm.H(Species = Species, H = H)
         }else if(is.na(use[i]) | use == "RCD2H"){
-          AGB <- BiomassEST::est.bm.RCD2H(Species = Species, RCD = RCD, H = H, H_meas = H_meas)
+          AGB[i] <- BiomassEST::est.bm.RCD2H(Species = Species, RCD = RCD, H = H, H_meas = H_meas)
         }
       }
     }
