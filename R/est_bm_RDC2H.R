@@ -15,7 +15,7 @@ est.bm.RCD2H <- function(Species, RCD, H, H_meas){
                                              BiomassEST:::Parameters_RCD2H$Epithet == Epithet]
   b2 <- BiomassEST:::Parameters_RCD2H$beta_2[BiomassEST:::Parameters_RCD2H$Genus == Genus &
                                              BiomassEST:::Parameters_RCD2H$Epithet == Epithet]
-  if(is.na(b1)){
+  if(length(b1) < 1){
     warning("Unknown species. Currently supported species:\n",
             paste(BiomassEST:::Parameters_RCD2H$Genus,
                   BiomassEST:::Parameters_RCD2H$Epithet, collapse = ", "))

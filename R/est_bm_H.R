@@ -12,7 +12,7 @@ est.bm.H <- function(Species, H){
                                            BiomassEST:::Parameters_H$Epithet == Epithet]
   b2 <- BiomassEST:::Parameters_H$beta_2[BiomassEST:::Parameters_H$Genus == Genus &
                                            BiomassEST:::Parameters_H$Epithet == Epithet]
-  if(is.na(b1)){
+  if(length(b1) < 1){
     warning("Unknown species. Currently supported species:\n",
             paste(BiomassEST:::Parameters_H$Genus,
                   BiomassEST:::Parameters_H$Epithet, collapse = ", "))

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "est.bm.H <- function(Species, H){\n  if(is.character(Species)){\n    Genus <- strsplit(Species, \"[ _]\")[[1]][1]\n    Epithet <- strsplit(Species, \"[ _]\")[[1]][2]\n    if(is.na(Epithet)){\n      Epithet <- \"spec\"\n    }\n  }else{\n    warning(\"Invalid Species argument: \", Species)\n  }\n  b1 <- BiomassEST:::Parameters_H$beta_1[BiomassEST:::Parameters_H$Genus == Genus &\n                                           BiomassEST:::Parameters_H$Epithet == Epithet]\n  b2 <- BiomassEST:::Parameters_H$beta_2[BiomassEST:::Parameters_H$Genus == Genus &\n                                           BiomassEST:::Parameters_H$Epithet == Epithet]\n  if(length(b1) < 1){\n    warning(\"Unknown species. Currently supported species:\\n\",\n            paste(BiomassEST:::Parameters_H$Genus,\n                  BiomassEST:::Parameters_H$Epithet, collapse = \", \"))\n  }else{\n    AGB <- b1*H^b2\n    return(AGB)\n  }\n}\n",
+    "created" : 1622882247640.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1585544575",
+    "id" : "A034AE29",
+    "lastKnownWriteTime" : 1622882320,
+    "last_content_update" : 1622882320640,
+    "path" : "D:/Dateien/Studium_KIT/Master_GOEK/10_FS_Geooekologie/BiomassEST/R/est_bm_H.R",
+    "project_path" : "R/est_bm_H.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

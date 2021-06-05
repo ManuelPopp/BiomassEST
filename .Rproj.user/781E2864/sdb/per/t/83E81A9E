@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "est.bm.RCD2H <- function(Species, RCD, H, H_meas){\n  if(is.character(Species)){\n    Genus <- strsplit(Species, \"[ _]\")[[1]][1]\n    Epithet <- strsplit(Species, \"[ _]\")[[1]][2]\n    if(is.na(Epithet)){\n      Epithet <- \"spec\"\n    }\n  }else{\n    warning(\"Invalid Species argument: \", Species)\n  }\n  Conifer <- BiomassEST:::Conifers$Conifer[which(BiomassEST:::Conifers$Genus == Genus)[1]]\n  Tx <- BiomassEST:::Corrections$Tx[BiomassEST:::Corrections$Height == H_meas & BiomassEST:::Corrections$Conifer == Conifer]\n  RCD_corrected <- RCD*Tx\n  b1 <- BiomassEST:::Parameters_RCD2H$beta_1[BiomassEST:::Parameters_RCD2H$Genus == Genus &\n                                             BiomassEST:::Parameters_RCD2H$Epithet == Epithet]\n  b2 <- BiomassEST:::Parameters_RCD2H$beta_2[BiomassEST:::Parameters_RCD2H$Genus == Genus &\n                                             BiomassEST:::Parameters_RCD2H$Epithet == Epithet]\n  if(length(b1) < 1){\n    warning(\"Unknown species. Currently supported species:\\n\",\n            paste(BiomassEST:::Parameters_RCD2H$Genus,\n                  BiomassEST:::Parameters_RCD2H$Epithet, collapse = \", \"))\n  }else{\n    AGB <- b1*(RCD_corrected^2 * H)^b2\n    return(AGB)\n  }\n}\n",
+    "created" : 1622882249707.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "278518755",
+    "id" : "83E81A9E",
+    "lastKnownWriteTime" : 1622882333,
+    "last_content_update" : 1622882333661,
+    "path" : "D:/Dateien/Studium_KIT/Master_GOEK/10_FS_Geooekologie/BiomassEST/R/est_bm_RDC2H.R",
+    "project_path" : "R/est_bm_RDC2H.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
