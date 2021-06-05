@@ -1,4 +1,4 @@
-\name{est.bm.RCD2H}
+﻿\name{est.bm.RCD2H}
 \alias{est.bm.RCD2H}
 \title{
 Estimate tree biomass based on root collar diameter and height
@@ -24,7 +24,7 @@ Height of the measurement in cm; transformations are available for 5, 10, 50, an
 }
 }
 \value{
-Returns a numeric value.
+Returns estimated tree biomass in g as a numeric value.
 }
 \references{
 Anninghoefer et al., 2016. Species-specific and generic biomass equations for seedlings and saplings of European tree species. Eur J Forest Res 135 2016, pp 313–329. doi: 10.1007/s10342-016-0937-z

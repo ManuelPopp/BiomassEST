@@ -1,4 +1,4 @@
-\name{est.bm.RCD}
+﻿\name{est.bm.RCD}
 \alias{est.bm.RCD}
 \title{Estimate biomass based on root collar diameter (RCD)}
 \usage{
@@ -19,7 +19,7 @@ Height of the measurement in cm; transformations are available for 5, 10, 50, an
 }
 }
 \value{
-Returns a numeric value.
+Returns estimated tree biomass in g as a numeric value.
 }
 \examples{
   est.bm.RCD(Species = "Abies alba", RCD = 15, H_meas = 10)

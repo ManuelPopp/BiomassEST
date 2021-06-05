@@ -18,7 +18,7 @@ Height of the tree in cm.
 }
 }
 \value{
-Returns a numeric value.
+Returns estimated tree biomass in g as a numeric value.
 }
 \examples{
 est.bm.H(Species = "Abies alba", H = 120)
