@@ -8,7 +8,7 @@ est.bm <- function(Species, RCD = NA, BHD = NA, H = NA, use = NA, H_meas = NA){
   if(all(is.na(H)) & !is.numeric(H_meas)){
     warning("Parameter H_meas not set. Please provide the height of your measurement.")
   }
-  if(all(is.na(H_meas)) & !anyNA(H) & !all(is.na(RCD))){
+  if(all(is.na(H_meas)) & !anyNA(H) & !all(is.na(RCD)) & !all(use == "H")){
     warning("RCD provided but H_meas missing. Calculating based on H.")
     use <- "H"
   }
