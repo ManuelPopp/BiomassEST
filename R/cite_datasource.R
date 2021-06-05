@@ -13,7 +13,7 @@ cite.datasource <- function(Species = NA, Parameter = "RCD", Author = NA, Bibtex
     key <- dataset$Citation[which(
       dataset$Genus == Genus & dataset$Epithet == Epithet
     )]
-    if(is.na(key)){
+    if(length(key) < 1){
       warning("Unknown species. Currently supported species:\n", paste(dataset$Genus, dataset$Epithet, collapse = ", "))
     }
   }else if(is.na(Author) & is.na(Species)){
