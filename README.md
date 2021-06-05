@@ -21,13 +21,13 @@ which outputs a named numeric, the estimated biomass in g:<br/>
    `2856.944`<br/>
 <br/>
 Alternatively, the a measurement of the stem diameter (root collar diameter, RCD, or diameter at breast height, BHD) can be passed using the `RCD` or the `BHD` argument. In this case, the height at which the measurement was taken must also be provided in the `H_meas` argument. Currently, there are only transformations available for <img src="https://render.githubusercontent.com/render/math?math=H_{meas} \in \{5, 10, 50, 130\}">.<br/>
-In BiomassEST version 0.0.1, there is no difference between `RCD` and `BHD`.<br/>
+In BiomassEST version 0.1.0, there is no difference between `RCD` and `BHD`.<br/>
 Example:<br/>
    `est.bm("Picea abies", RCD = 20, H_meas = 130)`<br/>
 <br/>
 Passing both tree height and RCD values will invoke the RCD2H method, unless an other method ("RCD" or "H") is explicitly set using the `use` argument.
 
-## Cite the package or surce data
+## Cite the package or source data
 If you want to cite this package, simply use<br/>
 `citation("BiomassEST")`<br/>
 The functions and parameters used to estimate tree biomass were extracted from peer-reviedwd publications. In order to cite those data sources, run<br/>
@@ -37,7 +37,7 @@ Defaults are:<br/>
 `cite.datasource(Species = NA, Parameter = "RCD", Author = NA, Bibtex = TRUE)`<br/>
 Citations can be printed as BibTeX or as plain text as defined in the `Bibtex` argument (class: logical).<br/>
 Examples:<br/>
-1) Return citation of the data source the package uses when calculating biomass of *Abies alba* from RCD<br/>
+1) Return citation of the data source the package uses when calculating biomass of *Abies alba* from RCD:<br/>
 `cite.datasource("Abies alba")`<br/>
 2) Return citation for a specific author occurring in the database of this package:<br/>
 `cite.datasource(Author = "Annighoefer")`

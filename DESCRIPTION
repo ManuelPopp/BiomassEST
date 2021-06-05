@@ -1,7 +1,7 @@
 Package: BiomassEST
 Type: Package
 Title: Estimation of tree biomass based on proxy parameters, following equations derived from peer-reviewed papers
-Version: 0.0.1
+Version: 0.1.0
 Authors@R: person(given = "Manuel R.",
            family = "Popp",
            role = c("aut", "cre"),
