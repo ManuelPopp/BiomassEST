@@ -1,6 +1,6 @@
 cite.datasource <- function(Species = NA, Parameter = "RCD", Author = NA, Bibtex = TRUE){
   if(is.na(Author) & !is.na(Species)){
-    dataset <- get(paste("BiomassEST:::Parameters", Parameter, sep = "_"))
+    dataset <- get(paste("Parameters", Parameter, sep = "_"))
     key <- dataset$Citation[which(
       dataset$Genus == Genus & dataset$Epithet == Epithet
     )]
