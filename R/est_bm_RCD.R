@@ -10,6 +10,16 @@ est.bm.RCD <- function(Species, RCD, H_meas){
   }
   Conifer <- BiomassEST:::Conifers$Conifer[which(BiomassEST:::Conifers$Genus == Genus)[1]]
   Tx <- BiomassEST:::Corrections$Tx[Corrections$Height == H_meas & BiomassEST:::Corrections$Conifer == Conifer]
+  # Check if a valid value was set for H_meas
+  if(anyNA(H_meas)){
+    warning("Argument H_meas is missing or NA.")
+  }else{
+    if(length(Tx) < 1){
+      warning("No correction factor for H_meas = ", H_meas, ".\nSupported values:\n",
+              paste(unique(BiomassEST:::Corrections$Height), collapse = ", "))
+    }
+  }
+  # Correct RCD using H_meas and estimate biomass
   RCD_corrected <- RCD*Tx
   b1 <- BiomassEST:::Parameters_RCD$beta_1[BiomassEST:::Parameters_RCD$Genus == Genus &
                                            BiomassEST:::Parameters_RCD$Epithet == Epithet]
