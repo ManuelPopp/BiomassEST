@@ -22,12 +22,12 @@ est.bm <- function(Species, RCD = NA, BHD = NA, H = NA, use = NA, H_meas = NA){
     if(length(Species) > 1 & length(H_meas) == 1){
       H_meas <- rep(H_meas, length(Species))
     }
-    if(!anyNA(RCD) & !anyNA(H) & !anyNA(H_meas) & use == "opportunistic" | all(use == "RCD2H")){
+    if(!anyNA(RCD) & !anyNA(H) & !anyNA(H_meas) & all(use == "opportunistic") | all(use == "RCD2H")){
       AGB <- mapply(FUN = BiomassEST::est.bm.RCD2H, Species = Species, RCD = RCD, H = H, H_meas = H_meas)
-    }else if(any(anyNA(RCD), anyNA(H), anyNA(H_meas)) & use == "opportunistic" | all(use == "RCD2H")){
+    }else if(any(anyNA(RCD), anyNA(H), anyNA(H_meas)) & all(use == "opportunistic") | all(use == "RCD2H")){
       warning("Data contains NA.")
       AGB <- NA
-    }else if(!use == "opportunistic" & !all(use == "RCD2H")){
+    }else if(!all(use == "opportunistic") & !all(use == "RCD2H")){
       AGB <- vector()
       for(i in 1:length(Species)){
         if(use[i] == "RCD"){
