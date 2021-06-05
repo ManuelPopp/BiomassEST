@@ -1,13 +1,14 @@
 Package: BiomassEST
 Type: Package
 Title: Estimation of tree biomass based on proxy parameters, following equations derived from peer-reviewed papers
-Version: 0.1.0
+Version: 0.0.1
 Authors@R: person(given = "Manuel R.",
            family = "Popp",
            role = c("aut", "cre"),
            email = "manuel.popp@student.kit.edu",
            comment = c(ORCID = "https://orcid.org/0000-0003-0747-5415"))
 Maintainer: Manuel R. Popp <manuel.popp@student.kit.edu>
+Date: 2021-06-05
 Description: The BiomassEST package provides simple functions to estimate tree biomass from easy-to-obtain data such as diameter at breast height, root collar diameter, or tree height. The functions rely on parameters obtained from peer-reviewed papers (use the BiomassEST::cite.datasource() function to display source paper citations).
 License: MIT + file LICENSE
 Encoding: UTF-8
