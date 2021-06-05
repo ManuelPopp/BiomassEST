@@ -13,10 +13,16 @@ cite.datasource <- function(Species = NA, Parameter = "RCD", Author = NA, Bibtex
     key <- dataset$Citation[which(
       dataset$Genus == Genus & dataset$Epithet == Epithet
     )]
+    if(is.na(key)){
+      warning("Unknown species. Currently supported species:\n", paste(dataset$Genus, dataset$Epithet, collapse = ", "))
+    }
   }else if(is.na(Author) & is.na(Species)){
     warning("Neither author nor species name provided.")
   }else if(!is.na(Author) & is.na(Species)){
     key <- BiomassEST:::Citations$Citekey[which(BiomassEST:::Citations$AuthorFirst == Author)[1]]
+    if(is.na(key)){
+      warning("Unknown author name. List of author names:\n", unique(BiomassEST:::Citations$AuthorFirst))
+    }
   }
   if(Bibtex){
     out <- BiomassEST:::Citations$Bibtex[which(BiomassEST:::Citations$Citekey == key)]

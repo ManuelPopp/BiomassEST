@@ -12,6 +12,12 @@ est.bm.H <- function(Species, H){
                                            BiomassEST:::Parameters_H$Epithet == Epithet]
   b2 <- BiomassEST:::Parameters_H$beta_2[BiomassEST:::Parameters_H$Genus == Genus &
                                            BiomassEST:::Parameters_H$Epithet == Epithet]
-  AGB <- b1*H^b2
-  return(AGB)
+  if(is.na(b1)){
+    warning("Unknown species. Currently supported species:\n",
+            paste(BiomassEST:::Parameters_H$Genus,
+                  BiomassEST:::Parameters_H$Epithet, collapse = ", "))
+  }else{
+    AGB <- b1*H^b2
+    return(AGB)
+  }
 }
