@@ -1,4 +1,4 @@
-﻿\name{est.bm}
+\name{est.bm}
 \alias{est.bm}
 \title{Estimate biomass based on available proxy data}
 \usage{
@@ -13,6 +13,9 @@ A species name, e.g, "Abies alba".
 }
 \item{RCD}{
 Root collar diameter in cm.
+}
+\item{BHD}{
+Diameter at breast height in cm.
 }
 \item{H}{
 Height of the tree in cm.

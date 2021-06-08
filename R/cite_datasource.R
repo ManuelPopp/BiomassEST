@@ -19,15 +19,15 @@ cite.datasource <- function(Species = NA, Parameter = "RCD", Author = NA, Bibtex
   }else if(is.na(Author) & is.na(Species)){
     warning("Neither author nor species name provided.")
   }else if(!is.na(Author) & is.na(Species)){
-    key <- BiomassEST:::Citations$Citekey[which(BiomassEST:::Citations$AuthorFirst == Author)[1]]
+    key <- Citations$Citekey[which(Citations$AuthorFirst == Author)[1]]
     if(is.na(key)){
-      warning("Unknown author name. List of author names:\n", unique(BiomassEST:::Citations$AuthorFirst))
+      warning("Unknown author name. List of author names:\n", unique(Citations$AuthorFirst))
     }
   }
   if(Bibtex){
-    out <- BiomassEST:::Citations$Bibtex[which(BiomassEST:::Citations$Citekey == key)]
+    out <- Citations$Bibtex[which(Citations$Citekey == key)]
   }else{
-    out <- BiomassEST:::Citations$PlainText[which(BiomassEST:::Citations$Citekey == key)]
+    out <- Citations$PlainText[which(Citations$Citekey == key)]
   }
   cat(paste(out))
 }

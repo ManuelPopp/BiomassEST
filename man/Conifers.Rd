@@ -7,5 +7,5 @@ Conifers
 List of coniferous trees in the data set.
 }
 \usage{
-Conifers(x)
+Conifers()
 }
