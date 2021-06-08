@@ -3,7 +3,6 @@ est.bm.RCD <- function(Species, RCD, H_meas){
     Genus <- strsplit(Species, "[ _]")[[1]][1]
     Epithet <- strsplit(Species, "[ _]")[[1]][2]
     if(is.na(Epithet)){
-      if(is.na(Epithet)){
       ConiferListEntry <- which(BiomassEST:::Conifers$Genus == Genus)
       if(length(ConiferListEntry) >= 1){
         if(BiomassEST:::Conifers$Conifer[ConiferListEntry]){
@@ -31,9 +30,9 @@ est.bm.RCD <- function(Species, RCD, H_meas){
   # Correct RCD using H_meas and estimate biomass
   RCD_corrected <- RCD*Tx
   b1 <- BiomassEST:::Parameters_RCD$beta_1[BiomassEST:::Parameters_RCD$Genus == Genus &
-                                           BiomassEST:::Parameters_RCD$Epithet == Epithet]
+                                             BiomassEST:::Parameters_RCD$Epithet == Epithet]
   b2 <- BiomassEST:::Parameters_RCD$beta_2[BiomassEST:::Parameters_RCD$Genus == Genus &
-                                           BiomassEST:::Parameters_RCD$Epithet == Epithet]
+                                             BiomassEST:::Parameters_RCD$Epithet == Epithet]
   if(length(b1) < 1){
     warning("Unknown species. Currently supported species:\n",
             paste(BiomassEST:::Parameters_RCD$Genus,
