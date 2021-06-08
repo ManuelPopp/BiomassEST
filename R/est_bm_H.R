@@ -3,6 +3,14 @@ est.bm.H <- function(Species, H){
     Genus <- strsplit(Species, "[ _]")[[1]][1]
     Epithet <- strsplit(Species, "[ _]")[[1]][2]
     if(is.na(Epithet)){
+      ConiferListEntry <- which(BiomassEST:::Conifers$Genus == Genus)
+      if(length(ConiferListEntry) >= 1){
+        if(BiomassEST:::Conifers$Conifer[ConiferListEntry]){
+          Genus <- "Conifer"
+        }else{
+          Genus <- "Broadleaf"
+        }
+      }
       Epithet <- "spec"
     }
   }else{
