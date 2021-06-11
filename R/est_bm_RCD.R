@@ -28,7 +28,7 @@ est.bm.RCD <- function(Species, RCD, H_meas){
     }
   }
   # Correct RCD using H_meas and estimate biomass
-  RCD_corrected <- RCD*Tx
+  RCD_corrected <- RCD*Tx*10# multiply by 10 to get mm (in the original paper, RCD was measured in mm)
   b1 <- Parameters_RCD$beta_1[Parameters_RCD$Genus == Genus &
                                              Parameters_RCD$Epithet == Epithet]
   b2 <- Parameters_RCD$beta_2[Parameters_RCD$Genus == Genus &
