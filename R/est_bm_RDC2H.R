@@ -28,7 +28,7 @@ est.bm.RCD2H <- function(Species, RCD, H, H_meas){
     }
   }
   # Correct RCD using H_meas and estimate biomass
-  RCD_corrected <- RCD*Tx
+  RCD_corrected <- RCD*Tx*10
   b1 <- Parameters_RCD2H$beta_1[Parameters_RCD2H$Genus == Genus &
                                              Parameters_RCD2H$Epithet == Epithet]
   b2 <- Parameters_RCD2H$beta_2[Parameters_RCD2H$Genus == Genus &
